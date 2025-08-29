@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="relative h-[60vh] min-h-[400px] w-full">
         <Image
-          src="https://picsum.photos/1800/800"
+          src="https://placehold.co/1800x800/60554a/FFF.webp?text=Terra+Table"
           alt="A beautiful dining setup at Terra Table"
           fill
           className="object-cover"
@@ -52,7 +52,7 @@ export default function Home() {
             </div>
             <div>
               <Image
-                src="https://picsum.photos/600/500"
+                src="https://placehold.co/600x500/a1887f/FFF.webp?text=Fresh+Ingredients"
                 alt="Freshly harvested vegetables"
                 width={600}
                 height={500}

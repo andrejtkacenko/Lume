@@ -10,7 +10,7 @@ export default function AboutPage() {
     <div className="bg-background">
       <section className="relative h-[40vh] min-h-[300px] w-full flex items-center justify-center">
         <Image
-          src="https://picsum.photos/1800/600"
+          src="https://placehold.co/1800x600/60554a/FFF.webp?text=Terra+Table+Interior"
           alt="The welcoming interior of Terra Table"
           fill
           className="object-cover"
@@ -61,7 +61,7 @@ export default function AboutPage() {
               </div>
                <div className="aspect-w-4 aspect-h-3">
                  <Image 
-                    src="https://picsum.photos/500/375"
+                    src="https://placehold.co/500x375/60554a/FFF.webp?text=Chef+Plating"
                     alt="A chef carefully plating a dish"
                     width={500}
                     height={375}
