@@ -6,9 +6,9 @@ import { Footer } from '@/components/footer';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Terra Table | Farm-to-Table Dining',
+  title: 'Lume | Farm-to-Table Dining',
   description:
-    'Experience the taste of nature at Terra Table. We offer a seasonal menu crafted from locally sourced ingredients in a warm, inviting ambiance.',
+    'Experience the taste of nature at Lume. We offer a seasonal menu crafted from locally sourced ingredients in a warm, inviting ambiance.',
 };
 
 export default function RootLayout({

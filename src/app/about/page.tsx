@@ -11,7 +11,7 @@ export default function AboutPage() {
       <section className="relative h-[40vh] min-h-[300px] w-full flex items-center justify-center">
         <Image
           src="https://picsum.photos/1800/600"
-          alt="The welcoming interior of Terra Table"
+          alt="The welcoming interior of Lume"
           fill
           className="object-cover"
           data-ai-hint="restaurant interior"

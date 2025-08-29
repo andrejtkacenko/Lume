@@ -1,14 +1,14 @@
 export const RESTAURANT_INFO = {
-  name: 'Terra Table',
+  name: 'Lume',
   cuisine: 'Farm-to-table',
   decorStyle: 'Rustic chic',
   decorDescription:
     'Earthy tones, reclaimed wood, and an abundance of indoor plants create a warm, rustic-chic environment. The lighting is soft and intimate, with handcrafted fixtures casting a gentle glow. Large windows offer views of a green garden, blurring the line between indoors and out.',
   history:
-    'Founded in 2020, Terra Table was born from a passion for sustainable dining and a love for our local community. We partner with local farms to bring you the freshest ingredients, creating a menu that changes with the seasons and celebrates the bounty of the earth.',
+    'Founded in 2020, Lume was born from a passion for sustainable dining and a love for our local community. We partner with local farms to bring you the freshest ingredients, creating a menu that changes with the seasons and celebrates the bounty of the earth.',
   address: '123 Garden Lane, Greenfield, GA 12345',
   phone: '(123) 456-7890',
-  email: 'contact@terratable.com',
+  email: 'contact@lume.com',
 };
 
 export const MENU_HIGHLIGHTS = [

@@ -7,7 +7,7 @@ const galleryImages = [
   { src: "https://picsum.photos/600/450?grayscale", alt: "A cozy dining area in the restaurant", hint: "restaurant interior" },
   { src: "https://picsum.photos/600/450", alt: "An artisanal cocktail on the bar", hint: "cocktail drink" },
   { src: "https://picsum.photos/600/450?grayscale", alt: "A dish featuring fresh heirloom tomatoes", hint: "fresh salad" },
-  { src: "https://picsum.photos/600/450", alt: "The exterior of Terra Table at dusk", hint: "restaurant exterior" },
+  { src: "https://picsum.photos/600/450", alt: "The exterior of Lume at dusk", hint: "restaurant exterior" },
   { src: "https://picsum.photos/600/450?grayscale", alt: "A chef working in the kitchen", hint: "chef kitchen" },
   { src: "https://picsum.photos/600/450", alt: "An assortment of delicious desserts", hint: "dessert platter" },
   { src: "https://picsum.photos/600/450?grayscale", alt: "A rustic table setting for dinner", hint: "table setting" },
@@ -18,7 +18,7 @@ export default function GalleryPage() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-16">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline text-primary">A Glimpse of Terra Table</h1>
+        <h1 className="text-4xl md:text-5xl font-headline text-primary">A Glimpse of Lume</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
           Experience the beauty of our ambiance and the artistry on your plate.
         </p>

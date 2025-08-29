@@ -60,7 +60,7 @@ export function ReservationForm() {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
     
-    const reservationId = `TT-${Date.now().toString().slice(-6)}`;
+    const reservationId = `LUME-${Date.now().toString().slice(-6)}`;
     const details = { ...values, reservationId };
     setReservationDetails(details);
 

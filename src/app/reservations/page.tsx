@@ -17,7 +17,7 @@ export default function ReservationsPage() {
         <div className="order-1 lg:order-2 aspect-w-3 aspect-h-4">
           <Image
             src="https://picsum.photos/600/800"
-            alt="An inviting table setting at Terra Table"
+            alt="An inviting table setting at Lume"
             width={600}
             height={800}
             className="rounded-lg shadow-xl object-cover w-full h-full"

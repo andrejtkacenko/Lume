@@ -5,7 +5,7 @@ export function Logo() {
     <div className="flex items-center gap-2">
       <Leaf className="h-6 w-6 text-accent" />
       <span className="text-xl font-bold font-headline text-primary">
-        Terra Table
+        Lume
       </span>
     </div>
   );

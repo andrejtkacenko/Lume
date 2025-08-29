@@ -11,7 +11,7 @@ export default function Home() {
       <section className="relative h-[60vh] min-h-[400px] w-full">
         <Image
           src="https://picsum.photos/1800/800"
-          alt="A beautiful dining setup at Terra Table"
+          alt="A beautiful dining setup at Lume"
           fill
           className="object-cover"
           priority
@@ -20,7 +20,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-primary-foreground">
           <h1 className="text-5xl md:text-7xl font-bold font-headline drop-shadow-md">
-            Welcome to Terra Table
+            Welcome to Lume
           </h1>
           <p className="mt-4 max-w-2xl text-lg md:text-xl">
             Where every dish tells a story of the earth.
@@ -39,7 +39,7 @@ export default function Home() {
                 Rooted in Nature, Crafted with Passion
               </h2>
               <p className="text-lg text-muted-foreground">
-                At Terra Table, we believe in the beauty of simplicity and the richness of the earth. Our philosophy is built on a commitment to seasonal, locally-sourced ingredients, ensuring that every meal is a true reflection of the region's bounty.
+                At Lume, we believe in the beauty of simplicity and the richness of the earth. Our philosophy is built on a commitment to seasonal, locally-sourced ingredients, ensuring that every meal is a true reflection of the region's bounty.
               </p>
               <p className="text-muted-foreground">
                 We partner with local farmers, fishers, and artisans who share our dedication to quality and sustainability. This not only allows us to serve the freshest food possible but also strengthens our community and honors the environment.
