@@ -28,7 +28,6 @@ import { format } from 'date-fns';
 import { PARTY_SIZES, RESERVATION_TIMES } from '@/lib/constants';
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { generateReservationQrCode } from '@/ai/flows/generate-reservation-qr';
 import Image from 'next/image';
 
 const reservationSchema = z.object({
@@ -47,8 +46,6 @@ export function ReservationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [reservationDetails, setReservationDetails] = useState<ReservationDetails | null>(null);
-  const [qrCode, setQrCode] = useState<string | null>(null);
-
 
   const form = useForm<z.infer<typeof reservationSchema>>({
     resolver: zodResolver(reservationSchema),
@@ -66,17 +63,6 @@ export function ReservationForm() {
     const reservationId = `TT-${Date.now().toString().slice(-6)}`;
     const details = { ...values, reservationId };
     setReservationDetails(details);
-
-    try {
-        const qrResult = await generateReservationQrCode({
-            details: JSON.stringify(details, null, 2)
-        });
-        if(qrResult.qrCode) {
-            setQrCode(qrResult.qrCode)
-        }
-    } catch (error) {
-        console.error("Failed to generate QR code", error);
-    }
 
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -98,18 +84,10 @@ export function ReservationForm() {
                 <p><strong>Time:</strong> {reservationDetails.time}</p>
                 <p><strong>Party Size:</strong> {reservationDetails.partySize} {parseInt(reservationDetails.partySize) > 1 ? 'people' : 'person'}</p>
             </div>
-            
-            {qrCode && (
-                <div className="flex flex-col items-center">
-                    <p className="text-muted-foreground mb-2">Scan this QR Code at the restaurant</p>
-                    <Image src={qrCode} alt="Reservation QR Code" width={150} height={150} />
-                </div>
-            )}
 
             <Button variant="outline" className="mt-8" onClick={() => {
                 setIsSubmitted(false);
                 setReservationDetails(null);
-                setQrCode(null);
                 form.reset();
             }}>
                 Make Another Reservation
@@ -226,7 +204,7 @@ export function ReservationForm() {
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Select time" />
-                        </Trigger>
+                        </SelectTrigger>
                       </FormControl>
                       <SelectContent>
                         {RESERVATION_TIMES.map((time) => (

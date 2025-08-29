@@ -1,7 +1,5 @@
-import { generateSeasonalGallery } from '@/ai/flows/generate-seasonal-gallery';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { RESTAURANT_INFO } from '@/lib/constants';
 
 function getSeason(date: Date): string {
   const month = date.getMonth();
@@ -18,24 +16,9 @@ const seasonHints: { [key: string]: string } = {
   Winter: 'cozy fireplace warm',
 };
 
-export default async function GalleryPage() {
+export default function GalleryPage() {
   const season = getSeason(new Date());
-  let imageCount = 9; // Default number of images
-
-  try {
-    const result = await generateSeasonalGallery({
-      season: season,
-      restaurantName: RESTAURANT_INFO.name,
-      cuisine: RESTAURANT_INFO.cuisine,
-      decorStyle: RESTAURANT_INFO.decorStyle,
-    });
-    if (result.imageUrls && result.imageUrls.length > 0) {
-      imageCount = result.imageUrls.length;
-    }
-  } catch (error) {
-    console.error('Failed to generate seasonal gallery:', error);
-    // Keep default imageCount on failure
-  }
+  const imageCount = 9;
   
   return (
     <div className="container mx-auto px-4 py-12 md:py-16">

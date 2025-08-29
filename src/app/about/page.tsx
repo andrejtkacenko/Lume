@@ -1,21 +1,10 @@
-import { summarizeAmbiance } from '@/ai/flows/summarize-ambiance';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { RESTAURANT_INFO } from '@/lib/constants';
 import { Quote, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 
-export default async function AboutPage() {
-  let ambianceSummary = 'A warm, rustic-chic environment where earthy tones and natural elements create a serene and inviting dining experience.';
-
-  try {
-    const result = await summarizeAmbiance({
-      decorDescription: RESTAURANT_INFO.decorDescription,
-    });
-    ambianceSummary = result.ambianceSummary;
-  } catch (error) {
-    console.error('Failed to generate ambiance summary:', error);
-    // Fallback summary is already set
-  }
+export default function AboutPage() {
+  const ambianceSummary = 'A warm, rustic-chic environment where earthy tones and natural elements create a serene and inviting dining experience.';
 
   return (
     <div className="bg-background">
