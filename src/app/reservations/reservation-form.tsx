@@ -26,7 +26,7 @@ import { CalendarIcon, CheckCircle, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
 import { PARTY_SIZES, RESERVATION_TIMES } from '@/lib/constants';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { generateReservationQrCode } from '@/ai/flows/generate-reservation-qr';
 import Image from 'next/image';
@@ -203,7 +203,7 @@ export function ReservationForm() {
                           mode="single"
                           selected={field.value}
                           onSelect={field.onChange}
-                          disabled={(date) => date < new Date() || date < new Date("1900-01-01")}
+                          disabled={(date) => date < new Date() || date < new Date('1900-01-01')}
                           initialFocus
                         />
                       </PopoverContent>
