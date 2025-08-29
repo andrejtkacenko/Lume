@@ -78,7 +78,6 @@ export default function Home() {
               <Card key={item.name} className="flex flex-col transition-transform transform hover:-translate-y-2 hover:shadow-2xl duration-300">
                 <CardHeader>
                   <CardTitle className="font-headline">{item.name}</CardTitle>
-                  <CardDescription className="text-accent font-semibold">{item.price}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <p className="text-muted-foreground">{item.description}</p>

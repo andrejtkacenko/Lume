@@ -26,10 +26,7 @@ export default function MenuPage() {
                     {items.map((item) => (
                         <Card key={item.name} className="flex flex-col border-border/60">
                             <CardHeader>
-                                <div className="flex justify-between items-start">
-                                    <CardTitle className="font-headline text-xl">{item.name}</CardTitle>
-                                    <span className="font-semibold text-primary whitespace-nowrap pl-4">{item.price}</span>
-                                </div>
+                                <CardTitle className="font-headline text-xl">{item.name}</CardTitle>
                             </CardHeader>
                             <CardContent className="flex-grow">
                                 <p className="text-muted-foreground">{item.description}</p>

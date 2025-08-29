@@ -15,19 +15,16 @@ export const MENU_HIGHLIGHTS = [
     {
         name: 'Forest Mushroom Risotto',
         description: 'Creamy Arborio rice with a medley of wild mushrooms, Parmesan, and a hint of truffle oil.',
-        price: '$22',
         category: 'Mains',
     },
     {
         name: 'Pan-Seared Scallops',
         description: 'With saffron cauliflower puree, asparagus tips, and a citrus-butter sauce.',
-        price: '$28',
         category: 'Mains',
     },
     {
         name: 'Heirloom Tomato Bruschetta',
         description: 'Toasted sourdough topped with fresh heirloom tomatoes, garlic, basil, and balsamic glaze.',
-        price: '$14',
         category: 'Appetizers',
     },
 ]
@@ -37,73 +34,60 @@ export const FULL_MENU = {
     {
       name: 'Heirloom Tomato Bruschetta',
       description: 'Toasted sourdough topped with fresh heirloom tomatoes, garlic, basil, and balsamic glaze.',
-      price: '$14',
     },
     {
       name: 'Burrata with Prosciutto',
       description: 'Creamy burrata, thinly sliced prosciutto, grilled peaches, and a honey-drizzle.',
-      price: '$16',
     },
     {
       name: 'Crispy Calamari',
       description: 'Lightly fried calamari served with a spicy marinara and lemon aioli.',
-      price: '$15',
     },
   ],
   Mains: [
     {
       name: 'Forest Mushroom Risotto',
       description: 'Creamy Arborio rice with a medley of wild mushrooms, Parmesan, and a hint of truffle oil.',
-      price: '$22',
     },
     {
       name: 'Pan-Seared Scallops',
       description: 'With saffron cauliflower puree, asparagus tips, and a citrus-butter sauce.',
-      price: '$28',
     },
     {
       name: 'Braised Short Rib',
       description: 'Slow-cooked in red wine, served with garlic mashed potatoes and seasonal root vegetables.',
-      price: '$32',
     },
     {
       name: 'Grilled Salmon',
       description: 'Sustainably-caught salmon with a lemon-dill sauce, quinoa, and roasted asparagus.',
-      price: '$26',
     },
   ],
   Desserts: [
     {
       name: 'Olive Oil Cake',
       description: 'A moist and tender cake with a hint of citrus, served with whipped cream and fresh berries.',
-      price: '$10',
     },
     {
       name: 'Chocolate Lava Cake',
       description: 'Warm molten chocolate cake served with vanilla bean ice cream.',
-      price: '$12',
     },
     {
       name: 'Seasonal Fruit Crumble',
       description: 'A selection of seasonal fruits baked with a cinnamon-oat topping.',
-      price: '$9',
     },
   ],
   Drinks: [
     {
         name: 'House Red Wine',
         description: 'A smooth and balanced red, perfect for any meal.',
-        price: '$9/glass',
     },
     {
         name: 'Artisanal Cocktail',
         description: 'Ask your server about our seasonal, handcrafted cocktail special.',
-        price: '$14',
     },
     {
         name: 'Freshly Squeezed Juice',
         description: 'Orange or Grapefruit, squeezed to order.',
-        price: '$7',
     }
   ]
 };
