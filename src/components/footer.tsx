@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Logo } from './logo';
 import { RESTAURANT_INFO } from '@/lib/constants';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { Container } from './ui/container';
 
 const socialLinks = [
   { name: 'Facebook', href: '#' },
@@ -12,7 +13,7 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4 py-12">
+      <Container className="py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Logo />
@@ -62,7 +63,7 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} {RESTAURANT_INFO.name}. All Rights Reserved.</p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import { ReservationForm } from './reservation-form';
+import { Container } from '@/components/ui/container';
 
 export default function ReservationsPage() {
   return (
-    <div className="container mx-auto px-4 py-12 md:py-16">
+    <Container className="py-12 md:py-16">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="order-2 lg:order-1">
           <div className="text-center lg:text-left mb-8">
@@ -25,6 +26,6 @@ export default function ReservationsPage() {
           />
         </div>
       </div>
-    </div>
+    </Container>
   );
 }

@@ -1,10 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Container } from '@/components/ui/container';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { FULL_MENU } from '@/lib/constants';
 
 export default function MenuPage() {
   return (
-    <div className="container mx-auto px-4 py-12 md:py-16">
+    <Container className="py-12 md:py-16">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline text-primary">Our Menu</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -36,6 +37,6 @@ export default function MenuPage() {
             </TabsContent>
         ))}
       </Tabs>
-    </div>
+    </Container>
   );
 }

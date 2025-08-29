@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
+import { Container } from '@/components/ui/container';
 
 const galleryImages = [
   { src: "https://picsum.photos/600/450?grayscale", alt: "A beautiful plate of Forest Mushroom Risotto", hint: "risotto dish" },
@@ -16,7 +17,7 @@ const galleryImages = [
 export default function GalleryPage() {
   
   return (
-    <div className="container mx-auto px-4 py-12 md:py-16">
+    <Container className="py-12 md:py-16">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline text-primary">A Glimpse of Lume</h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -39,6 +40,6 @@ export default function GalleryPage() {
           </Card>
         ))}
       </div>
-    </div>
+    </Container>
   );
 }

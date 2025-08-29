@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Container } from '@/components/ui/container';
 import { MENU_HIGHLIGHTS } from '@/lib/constants';
 import { ArrowRight, UtensilsCrossed } from 'lucide-react';
 import Image from 'next/image';
@@ -32,7 +33,7 @@ export default function Home() {
       </section>
 
       <section id="about" className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
+        <Container>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-headline text-primary">
@@ -61,11 +62,11 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section id="menu" className="py-16 md:py-24 bg-secondary">
-        <div className="container mx-auto px-4 text-center">
+        <Container className="text-center">
           <UtensilsCrossed className="mx-auto h-12 w-12 text-accent" />
           <h2 className="mt-4 text-3xl md:text-4xl font-headline text-primary">
             A Taste of the Season
@@ -91,7 +92,7 @@ export default function Home() {
           <Button asChild size="lg" variant="outline" className="mt-12">
             <Link href="/menu">View Full Menu</Link>
           </Button>
-        </div>
+        </Container>
       </section>
     </div>
   );

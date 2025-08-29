@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Container } from '@/components/ui/container';
 import { RESTAURANT_INFO } from '@/lib/constants';
 import { Quote, Sparkles } from 'lucide-react';
 import Image from 'next/image';
@@ -23,7 +24,7 @@ export default function AboutPage() {
       </section>
 
       <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
+        <Container>
           <div className="max-w-4xl mx-auto">
             <Card className="shadow-lg -mt-32 md:-mt-48 z-20 relative">
               <CardHeader>
@@ -71,7 +72,7 @@ export default function AboutPage() {
                </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     </div>
   );
