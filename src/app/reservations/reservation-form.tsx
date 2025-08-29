@@ -26,9 +26,8 @@ import { CalendarIcon, CheckCircle, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
 import { PARTY_SIZES, RESERVATION_TIMES } from '@/lib/constants';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import Image from 'next/image';
 
 const reservationSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -42,10 +41,26 @@ type ReservationDetails = z.infer<typeof reservationSchema> & {
     reservationId: string;
 };
 
+// A key for storing reservation data in localStorage
+const STORAGE_KEY = 'lume-reservation';
+
 export function ReservationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [reservationDetails, setReservationDetails] = useState<ReservationDetails | null>(null);
+
+  // Check localStorage for an existing reservation when the component loads
+  useEffect(() => {
+    const storedReservation = localStorage.getItem(STORAGE_KEY);
+    if (storedReservation) {
+      try {
+        setReservationDetails(JSON.parse(storedReservation));
+      } catch (error) {
+        console.error("Failed to parse stored reservation:", error);
+        localStorage.removeItem(STORAGE_KEY);
+      }
+    }
+  }, []);
+
 
   const form = useForm<z.infer<typeof reservationSchema>>({
     resolver: zodResolver(reservationSchema),
@@ -62,34 +77,39 @@ export function ReservationForm() {
     
     const reservationId = `LUME-${Date.now().toString().slice(-6)}`;
     const details = { ...values, reservationId };
+    
+    // Store the successful reservation in state and localStorage
     setReservationDetails(details);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(details));
 
     setIsSubmitting(false);
-    setIsSubmitted(true);
   }
 
-  if (isSubmitted && reservationDetails) {
+  const handleMakeAnotherReservation = () => {
+    // Clear state and localStorage to allow a new booking
+    setReservationDetails(null);
+    localStorage.removeItem(STORAGE_KEY);
+    form.reset();
+  }
+
+  if (reservationDetails) {
     return (
       <Card className="shadow-lg">
         <CardContent className="p-8 text-center">
             <CheckCircle className="w-16 h-16 text-accent mx-auto mb-4" />
             <h3 className="text-2xl font-headline text-primary mb-2">Reservation Confirmed!</h3>
             <p className="text-muted-foreground mb-6">
-                Thank you, {reservationDetails.name}! Please show this confirmation upon arrival.
+                Thank you, {reservationDetails.name}! Your table is booked. Please show this confirmation upon arrival.
             </p>
 
             <div className="border bg-card rounded-lg p-4 space-y-3 text-left mb-6">
                 <p><strong>Reservation ID:</strong> {reservationDetails.reservationId}</p>
-                <p><strong>Date:</strong> {format(reservationDetails.date, 'PPP')}</p>
+                <p><strong>Date:</strong> {format(new Date(reservationDetails.date), 'PPP')}</p>
                 <p><strong>Time:</strong> {reservationDetails.time}</p>
                 <p><strong>Party Size:</strong> {reservationDetails.partySize} {parseInt(reservationDetails.partySize) > 1 ? 'people' : 'person'}</p>
             </div>
 
-            <Button variant="outline" className="mt-8" onClick={() => {
-                setIsSubmitted(false);
-                setReservationDetails(null);
-                form.reset();
-            }}>
+            <Button variant="outline" className="mt-8" onClick={handleMakeAnotherReservation}>
                 Make Another Reservation
             </Button>
         </CardContent>
