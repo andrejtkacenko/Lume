@@ -2,15 +2,15 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 
 const galleryImages = [
-  { src: "https://placehold.co/600x450/60554a/FFF.webp?text=Mushroom+Risotto", alt: "A beautiful plate of Forest Mushroom Risotto", hint: "risotto dish" },
-  { src: "https://placehold.co/600x450/8d7f70/FFF.webp?text=Seared+Scallops", alt: "Deliciously seared scallops appetizer", hint: "seafood appetizer" },
-  { src: "https://placehold.co/600x450/a1887f/FFF.webp?text=Cozy+Dining+Area", alt: "A cozy dining area in the restaurant", hint: "restaurant interior" },
-  { src: "https://placehold.co/600x450/795548/FFF.webp?text=Artisanal+Cocktail", alt: "An artisanal cocktail on the bar", hint: "cocktail drink" },
-  { src: "https://placehold.co/600x450/c2b2a8/FFF.webp?text=Heirloom+Tomato+Dish", alt: "A dish featuring fresh heirloom tomatoes", hint: "fresh salad" },
-  { src: "https://placehold.co/600x450/6d4c41/FFF.webp?text=Restaurant+Exterior", alt: "The exterior of Terra Table at dusk", hint: "restaurant exterior" },
-  { src: "https://placehold.co/600x450/9e9d9d/FFF.webp?text=Chef+in+Kitchen", alt: "A chef working in the kitchen", hint: "chef kitchen" },
-  { src: "https://placehold.co/600x450/bcaaa4/FFF.webp?text=Dessert+Platter", alt: "An assortment of delicious desserts", hint: "dessert platter" },
-  { src: "https://placehold.co/600x450/5d4037/FFF.webp?text=Rustic+Table+Setting", alt: "A rustic table setting for dinner", hint: "table setting" },
+  { src: "https://picsum.photos/600/450?grayscale", alt: "A beautiful plate of Forest Mushroom Risotto", hint: "risotto dish" },
+  { src: "https://picsum.photos/600/450", alt: "Deliciously seared scallops appetizer", hint: "seafood appetizer" },
+  { src: "https://picsum.photos/600/450?grayscale", alt: "A cozy dining area in the restaurant", hint: "restaurant interior" },
+  { src: "https://picsum.photos/600/450", alt: "An artisanal cocktail on the bar", hint: "cocktail drink" },
+  { src: "https://picsum.photos/600/450?grayscale", alt: "A dish featuring fresh heirloom tomatoes", hint: "fresh salad" },
+  { src: "https://picsum.photos/600/450", alt: "The exterior of Terra Table at dusk", hint: "restaurant exterior" },
+  { src: "https://picsum.photos/600/450?grayscale", alt: "A chef working in the kitchen", hint: "chef kitchen" },
+  { src: "https://picsum.photos/600/450", alt: "An assortment of delicious desserts", hint: "dessert platter" },
+  { src: "https://picsum.photos/600/450?grayscale", alt: "A rustic table setting for dinner", hint: "table setting" },
 ]
 
 export default function GalleryPage() {

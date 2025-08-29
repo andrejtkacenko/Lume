@@ -16,7 +16,7 @@ export default function ReservationsPage() {
         </div>
         <div className="order-1 lg:order-2 aspect-w-3 aspect-h-4">
           <Image
-            src="https://placehold.co/600x800/8d7f70/FFF.webp?text=Table+Setting"
+            src="https://picsum.photos/600/800"
             alt="An inviting table setting at Terra Table"
             width={600}
             height={800}
