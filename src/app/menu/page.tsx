@@ -12,7 +12,7 @@ export default function MenuPage() {
           Crafted with the freshest seasonal ingredients from local farms.
         </p>
       </div>
-      <Tabs defaultValue="Mains" className="w-full">
+      <Tabs defaultValue="Appetizers" className="w-full">
         <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto">
           <TabsTrigger value="Appetizers">Appetizers</TabsTrigger>
           <TabsTrigger value="Mains">Mains</TabsTrigger>
